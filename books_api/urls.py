@@ -3,9 +3,9 @@ from django.urls import path
 from books_api.views import getAllBooks, deleteBook, updateBook, getSingleBook, createBook;
 
 urlpatterns = [
-    path('getbooks/', getAllBooks),
-    path('createbook/', createBook),
-    path('getbook/<int:pk>/', getSingleBook),
-    path('updatebook/<int:pk>/', updateBook),
-    path('deletebook/<int:pk>/', deleteBook),
+    path('getbooks/', getAllBooks, name="Get All Books"),
+    path('createbook/', createBook, name="Create New Book"),
+    path('getbook/<int:pk>/', getSingleBook, name="Get Single Book"),
+    path('updatebook/<int:pk>/', updateBook, name="Update Book"),
+    path('deletebook/<int:pk>/', deleteBook, name="Delete Book"),
 ]
